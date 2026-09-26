@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Abhishek Kumar | Senior .NET Engineer</title>
+  <meta name="description" content="Senior Software Engineer specializing in .NET Core, microservices, Azure Service Bus, and SQL Server." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="Scripts/styles.css" />
+  <script>
+    (function () {
+      var pref = localStorage.getItem("theme-pref");
+      var h = new Date().getHours();
+      var theme = (pref === "light" || pref === "dark") ? pref : (h >= 6 && h < 18 ? "light" : "dark");
+      document.documentElement.setAttribute("data-theme", theme);
+    })();
+  </script>
+</head>
+<body>
+  <nav id="nav">
+    <div class="nav-inner">
+      <a class="logo" href="#home">AK<span>.</span></a>
+      <ul class="nav-links" id="links">
+        <li class="menu-close-row">
+          <button type="button" class="menu-close" id="menuClose" aria-label="Close menu"><i class="fa-solid fa-xmark"></i></button>
+        </li>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#domain">Domain</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a class="nav-cta" href="#contact">Contact</a></li>
+      </ul>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle light/dark mode" title="Toggle theme">
+        <i class="fa-solid fa-sun icon-sun"></i>
+        <i class="fa-solid fa-moon icon-moon"></i>
+      </button>
+      <button class="hamburger" id="ham" aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
+    </div>
+  </nav>
+  <div class="nav-backdrop" id="navBackdrop"></div>
+
+  <header class="hero" id="home">
+    <div class="grid"></div>
+    <div class="badge">Open to opportunities</div>
+    <h1>Abhishek Kumar</h1>
+    <p class="subtitle">Senior Software Engineer</p>
+    <p class="location"><i class="fa-solid fa-location-dot"></i> Hyderabad, India</p>
+    <p class="tagline"><span id="heroYears">9.5+</span> years crafting scalable <span class="hi">.NET Core</span> microservices, Azure integrations and high-performance systems.</p>
+    <div class="cta">
+      <a class="btn btn-p" href="#experience"><i class="fa-solid fa-briefcase"></i> View experience</a>
+      <a class="btn btn-o" href="#contact"><i class="fa-solid fa-envelope"></i> Get in touch</a>
+    </div>
+    <div class="stats">
+      <div><div class="stat-num" id="yNum">0</div><div class="stat-label">Years experience</div></div>
+      <div><div class="stat-num" id="cNum">0</div><div class="stat-label">Companies</div></div>
+      <div><div class="stat-num" id="tNum">0</div><div class="stat-label">Core technologies</div></div>
+    </div>
+  </header>
+
+  <section id="about">
+    <div class="wrap">
+      <div class="head"><div class="tag">About</div><h2>Building reliable systems that scale</h2></div>
+      <div class="about">
+        <div>
+          <p>Senior Software Engineer with <strong id="aboutYears">9.5+ years</strong> of hands-on experience in Microsoft technologies. Specializing in <strong>.NET Framework, .NET Core, microservices</strong>, and Entity Framework Core.</p>
+          <p>Skilled in Azure Service Bus integration, Azure DevOps automation, and SQL Server design and optimization. Experienced in Agile delivery and leading small engineering teams.</p>
+          <p>Passionate about clean architecture, mentoring, and modernizing systems on the current Microsoft stack.</p>
+        </div>
+        <div class="cards">
+          <a class="card" href="mailto:abhik1109@outlook.com"><i class="fa-solid fa-envelope"></i><div><h4>Email</h4><p>abhik1109@outlook.com</p></div></a>
+          <a class="card" href="https://www.linkedin.com/in/abhishek-kumar-akbihar094" target="_blank" rel="noreferrer"><i class="fa-brands fa-linkedin-in"></i><div><h4>LinkedIn</h4><p>linkedin.com/in/abhishek-kumar-akbihar094</p></div></a>
+          <a class="card" href="https://www.naukri.com/mnjuser/profile?id=&altresid" target="_blank" rel="noreferrer"><i class="fa-solid fa-briefcase"></i><div><h4>Naukri</h4><p>naukri.com/profile</p></div></a>
+          <div class="card"><i class="fa-solid fa-code"></i><div><h4>Focus</h4><p>.NET Core · Microservices · Azure</p></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="wrap">
+      <div class="head"><div class="tag">Career</div><h2>Professional experience</h2></div>
+      <div class="timeline">
+        <div class="item">
+          <div class="marker"><div class="dot"></div><div class="line"></div></div>
+          <article class="job">
+            <div class="job-h"><div><h3>Senior Engineer</h3><h4><img class="co-logo" src="logos/AM_Logo.png" alt="ArcelorMittal" /> ArcelorMittal Global Business &amp; Technologies Pvt. Ltd.</h4></div><span class="date">Nov 2025 – Present</span></div>
+            <p>Designing and maintaining .NET Core microservices with loosely coupled APIs integrated through Azure Service Bus. Owning the delivery module — API maintenance, upgrades, and alignment with current Microsoft stack. Requirement analysis, solution design, unit &amp; integration testing, and mentoring small engineering groups on coding, testing, and Agile delivery.</p>
+            <div class="tags"><span>.NET Core</span><span>Microservices</span><span>Azure Service Bus</span><span>Agile</span></div>
+          </article>
+        </div>
+        <div class="item">
+          <div class="marker"><div class="dot"></div><div class="line"></div></div>
+          <article class="job">
+            <div class="job-h"><div><h3>Senior Software Engineer</h3><h4><img class="co-logo" src="logos/CGI_Logo.png" alt="CGI" /> CGI Information Systems and Management Consultants Pvt. Ltd.</h4></div><span class="date">Jan 2023 – Oct 2025</span></div>
+            <p>Worked with a BFSI client on daily banking solutions in a microservices architecture. Requirement analysis, solution design, implementation, and testing. Maintained card-transaction applications for reliability and compliance, and modernized legacy systems onto the latest .NET Core technologies.</p>
+            <div class="tags"><span>.NET Core</span><span>Microservices</span><span>BFSI</span><span>Card Transactions</span></div>
+          </article>
+        </div>
+        <div class="item">
+          <div class="marker"><div class="dot"></div><div class="line"></div></div>
+          <article class="job">
+            <div class="job-h"><div><h3>Senior Engineer</h3><h4><img class="co-logo" src="logos/Nagarro_logo.png" alt="Nagarro" /> Nagarro Enterprise Services Pvt. Ltd.</h4></div><span class="date">Dec 2021 – Jan 2023</span></div>
+            <p>Part of a payment-processing team verifying transactions across sources before fund release. Maintained and upgraded Microsoft APIs, improved performance of payment-verification apps, and delivered through Azure DevOps in an Agile setup.</p>
+            <div class="tags"><span>.NET</span><span>Payment APIs</span><span>Azure DevOps</span><span>Agile</span></div>
+          </article>
+        </div>
+        <div class="item">
+          <div class="marker"><div class="dot"></div></div>
+          <article class="job">
+            <div class="job-h"><div><h3>Senior Software Engineer</h3><h4><img class="co-logo" src="logos/Mphasis_Logo.png" alt="Mphasis" /> Mphasis Limited</h4></div><span class="date">Mar 2017 – Dec 2021</span></div>
+            <p>Started with a manufacturing client on .NET Framework 4.8, MVC, and SQL Server. Later moved to a finance-brokerage BFSI client building microservices. Account creation and data management with .NET Core and SQL Server, plus client-facing requirement work and testing.</p>
+            <div class="tags"><span>.NET Framework</span><span>MVC</span><span>.NET Core</span><span>SQL Server</span><span>Microservices</span></div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="alt" id="skills">
+    <div class="wrap">
+      <div class="head"><div class="tag">Expertise</div><h2>Technical skills</h2></div>
+      <div class="skills">
+        <article class="sk">
+          <div class="sk-ic"><i class="fa-brands fa-microsoft"></i></div>
+          <h3>.NET &amp; Backend</h3>
+          <div class="skill-tags">
+            <span>C#</span><span>.NET Core</span><span>.NET</span><span>ASP.NET Core</span><span>ASP.NET MVC</span>
+            <span>Web API</span><span>Entity Framework Core</span><span>LINQ</span><span>ADO.NET</span>
+            <span>Dependency Injection</span><span>Middleware</span><span>SignalR</span>
+          </div>
+        </article>
+        <article class="sk">
+          <div class="sk-ic"><i class="fa-solid fa-cloud"></i></div>
+          <h3>Cloud, APIs &amp; DevOps</h3>
+          <div class="skill-tags">
+            <span>Azure Service Bus</span><span>Azure DevOps</span><span>REST APIs</span><span>CI/CD</span>
+            <span>Git</span><span>Docker</span><span>App Services</span><span>OAuth / JWT</span>
+          </div>
+        </article>
+        <article class="sk">
+          <div class="sk-ic"><i class="fa-solid fa-database"></i></div>
+          <h3>Data, Testing &amp; Architecture</h3>
+          <div class="skill-tags">
+            <span>SQL Server</span><span>T-SQL</span><span>Stored Procedures</span><span>NUnit</span>
+            <span>MS Test</span><span>xUnit</span><span>Microservices</span><span>Clean Architecture</span>
+            <span>Design Patterns</span><span>Agile / Scrum</span>
+          </div>
+        </article>
+      </div>
+      <article class="sk domain-sk" id="domain">
+        <div class="sk-ic"><i class="fa-solid fa-industry"></i></div>
+        <h3>Domain knowledge</h3>
+        <p class="domain-desc">Hands-on delivery across regulated and industrial systems.</p>
+        <div class="skill-tags">
+          <span>BFSI</span>
+          <span>Banking solutions</span>
+          <span>Card transactions</span>
+          <span>Payment processing</span>
+          <span>Finance &amp; brokerage</span>
+          <span>Manufacturing</span>
+          <span>Enterprise delivery</span>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="education">
+    <div class="wrap">
+      <div class="head"><div class="tag">Academics</div><h2>Education</h2></div>
+      <article class="edu">
+        <div class="edu-ic"><i class="fa-solid fa-graduation-cap"></i></div>
+        <div>
+          <h3>Bachelor of Engineering</h3>
+          <h4>Computer Science &amp; Engineering</h4>
+          <p>R.G.P.V. Bhopal, Madhya Pradesh</p>
+          <span class="date">August 2012 – June 2016</span>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="goal">
+        <i class="fa-solid fa-bullseye"></i>
+        <h3>Looking ahead</h3>
+        <p>Looking forward to leading and mentoring junior developers while continuing to architect high-quality, scalable solutions.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="alt" id="contact">
+    <div class="wrap">
+      <div class="head">
+        <div class="tag">Connect</div>
+        <h2>Get in touch</h2>
+        <p class="desc">Email, LinkedIn, or Naukri — reach out anytime.</p>
+      </div>
+      <div class="contact">
+        <a class="cc" href="mailto:abhik1109@outlook.com">
+          <div class="ic"><i class="fa-solid fa-envelope"></i></div>
+          <h4>Email</h4>
+          <p>abhik1109@outlook.com</p>
+        </a>
+        <a class="cc" href="https://www.linkedin.com/in/abhishek-kumar-akbihar094" target="_blank" rel="noreferrer">
+          <div class="ic"><i class="fa-brands fa-linkedin-in"></i></div>
+          <h4>LinkedIn</h4>
+          <p>abhishek-kumar-akbihar094</p>
+        </a>
+        <a class="cc" href="https://www.naukri.com/mnjuser/profile?id=&altresid" target="_blank" rel="noreferrer">
+          <div class="ic"><i class="fa-solid fa-briefcase"></i></div>
+          <h4>Naukri</h4>
+          <p>naukri.com/profile</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer>Abhishek Kumar · <span id="yr"></span></footer>
+
+  <a class="fab dl-float" href="MyDocuments/Abhi_CV_DotNetCore.pdf" target="_blank" rel="noreferrer" aria-label="View Resume">
+    <i class="fa-solid fa-file-arrow-down"></i>
+  </a>
+  <a class="fab wa-float" href="#" id="waBtn" data-c="KzkxOTk2MDI1MjkwMQ==" aria-label="Chat on WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <script src="Scripts/script.js"></script>
+</body>
+</html>
