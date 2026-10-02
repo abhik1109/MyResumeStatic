@@ -275,28 +275,64 @@ footer { border-top: 1px solid var(--border); padding: 32px 0; text-align: cente
             background: var(--primary);
             opacity: 0.85;
         }
-
-        /* ===== Contact CTA button ===== */
+/* ===== Contact CTA ===== */
 .contact-cta {
-  display: flex;
-  justify-content: center;
-  margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    margin-top: 42px;
 }
+
+/* Make the button match hero .btn style exactly */
+.contact-btn {
+    /* Reset native button styles */
+    border: none;
+    cursor: pointer;
+    font-family: var(--font);
+    /* Match existing .btn */
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 13px 28px;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    letter-spacing: 0.01em;
+    /* Primary gradient (same as .btn-p) */
+    background: linear-gradient(135deg, #22d3ee, #818cf8);
+    color: var(--btn-fg);
+    transition: transform 0.2s ease, box-shadow 0.25s ease, filter 0.2s ease;
+    box-shadow: 0 4px 18px rgba(34, 211, 238, 0.25);
+}
+
+    .contact-btn:hover {
+        transform: translateY(-2px);
+        filter: brightness(1.08);
+        box-shadow: 0 8px 26px rgba(34, 211, 238, 0.35);
+    }
+
+    .contact-btn:active {
+        transform: translateY(0);
+        filter: brightness(0.97);
+    }
+
+    .contact-btn i {
+        font-size: 0.95rem;
+    }
 
 /* ===== Modal ===== */
 .modal-overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.65);
-  backdrop-filter: blur(6px);
-  z-index: 200;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s ease, visibility 0.3s ease;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.65);
+    backdrop-filter: blur(6px);
+    z-index: 200;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 .modal-overlay.open {
   opacity: 1;
