@@ -132,6 +132,7 @@ document.querySelectorAll(".reveal").forEach(el => revealObs.observe(el));
 (function () {
     const modal = document.getElementById("contactModal");
     const openBtn = document.getElementById("openContactModal");
+    const openBtnFloat = document.getElementById("openContactModalFloat");
     const closeBtn = document.getElementById("closeContactModal");
     const form = document.getElementById("contactForm");
     const status = document.getElementById("formStatus");
@@ -175,7 +176,8 @@ document.querySelectorAll(".reveal").forEach(el => revealObs.observe(el));
         clearTimeout(toastTimer);
     }
 
-    openBtn.addEventListener("click", openModal);
+    if (openBtn) openBtn.addEventListener("click", openModal);
+    if (openBtnFloat) openBtnFloat.addEventListener("click", openModal);
     closeBtn.addEventListener("click", closeModal);
 
     // Close modal on overlay click

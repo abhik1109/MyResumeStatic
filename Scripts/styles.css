@@ -517,3 +517,28 @@ footer { border-top: 1px solid var(--border); padding: 32px 0; text-align: cente
         color: var(--fg);
         background: var(--surface-2);
     }
+
+/* ===== Floating Message Button ===== */
+.msg-float {
+    bottom: 100px; /* sits above WhatsApp */
+    background: linear-gradient(135deg, #22d3ee, #818cf8);
+    box-shadow: 0 6px 20px rgba(34, 211, 238, 0.35);
+    border: none;
+    cursor: pointer;
+}
+
+    .msg-float:hover {
+        box-shadow: 0 8px 28px rgba(34, 211, 238, 0.5);
+        color: #fff;
+    }
+
+/* Mobile adjustment (same as WhatsApp) */
+@media (max-width: 768px) {
+    .msg-float {
+        bottom: 84px;
+        right: 20px;
+        width: 52px;
+        height: 52px;
+        font-size: 1.35rem;
+    }
+}
