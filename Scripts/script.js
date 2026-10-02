@@ -128,3 +128,103 @@ const revealObs = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
 document.querySelectorAll(".reveal").forEach(el => revealObs.observe(el));
+// ===== Contact Modal + Toast =====
+(function () {
+    const modal = document.getElementById("contactModal");
+    const openBtn = document.getElementById("openContactModal");
+    const closeBtn = document.getElementById("closeContactModal");
+    const form = document.getElementById("contactForm");
+    const status = document.getElementById("formStatus");
+    const submitBtn = document.getElementById("formSubmitBtn");
+    const toast = document.getElementById("successToast");
+    const toastClose = document.getElementById("toastClose");
+
+    if (!modal || !openBtn || !form) return;
+
+    let toastTimer = null;
+
+    function openModal() {
+        modal.classList.add("open");
+        modal.setAttribute("aria-hidden", "false");
+        document.body.style.overflow = "hidden";
+        setTimeout(() => document.getElementById("cName")?.focus(), 100);
+    }
+
+    function closeModal() {
+        modal.classList.remove("open");
+        modal.setAttribute("aria-hidden", "true");
+        document.body.style.overflow = "";
+        if (status) {
+            status.textContent = "";
+            status.className = "form-status";
+        }
+    }
+
+    function showToast() {
+        if (!toast) return;
+        toast.classList.add("show");
+
+        // Auto-hide after 5 seconds
+        clearTimeout(toastTimer);
+        toastTimer = setTimeout(hideToast, 5000);
+    }
+
+    function hideToast() {
+        if (!toast) return;
+        toast.classList.remove("show");
+        clearTimeout(toastTimer);
+    }
+
+    openBtn.addEventListener("click", openModal);
+    closeBtn.addEventListener("click", closeModal);
+
+    // Close modal on overlay click
+    modal.addEventListener("click", (e) => {
+        if (e.target === modal) closeModal();
+    });
+
+    // Close modal on Escape
+    document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && modal.classList.contains("open")) closeModal();
+    });
+
+    // Manual close for toast
+    if (toastClose) {
+        toastClose.addEventListener("click", hideToast);
+    }
+
+    // Form submit
+    form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        if (status) {
+            status.textContent = "";
+            status.className = "form-status";
+        }
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
+
+        try {
+            const res = await fetch(form.action, {
+                method: "POST",
+                body: new FormData(form),
+                headers: { Accept: "application/json" }
+            });
+
+            if (res.ok) {
+                form.reset();
+                closeModal();          // close the popup
+                showToast();           // show the 5-second toast with close button
+            } else {
+                throw new Error("Failed");
+            }
+        } catch (err) {
+            if (status) {
+                status.textContent = "Something went wrong. Please try email instead.";
+                status.classList.add("error");
+            }
+        } finally {
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = '<i class="fa-solid fa-paper-plane"></i> Send message';
+        }
+    });
+})();
