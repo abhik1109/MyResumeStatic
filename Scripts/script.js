@@ -36,7 +36,7 @@
 })();
 
 function yearsOfExperience() {
-  const start = new Date(2017, 2, 16);
+  const start = new Date(2017, 3, 16);
   const now = new Date();
   let years = now.getFullYear() - start.getFullYear();
   let months = now.getMonth() - start.getMonth();
