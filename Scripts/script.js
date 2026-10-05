@@ -197,6 +197,13 @@ document.querySelectorAll(".reveal").forEach(el => revealObs.observe(el));
 
     // Form submit
     form.addEventListener("submit", async (e) => {
+        const gotcha = document.getElementById("robofield").value;
+        if (gotcha) {
+            e.preventDefault();
+            form.reset();
+            closeModal();   
+            return;
+        }
         e.preventDefault();
         if (status) {
             status.textContent = "";
